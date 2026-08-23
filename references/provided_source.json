@@ -1,0 +1,24 @@
+{
+  "id": "APA_DICTIONARY_WASON",
+  "title": "Wason selection task",
+  "authors": [],
+  "year": 2018,
+  "journal": "APA Dictionary of Psychology",
+  "doi_or_url": "https://dictionary.apa.org/wason-selection-task",
+  "citation_count": 0,
+  "is_high_impact": false,
+  "open_access": true,
+  "used_for": [
+    "primary_protocol_source",
+    "task_workflow",
+    "stimulus_specification"
+  ],
+  "parameter_bindings": {},
+  "notes": "User-provided canonical paradigm entry; citation threshold exemption applies because this is the requested reference entry rather than a supporting research article.",
+  "source_kind": "url",
+  "source_locator": "https://dictionary.apa.org/wason-selection-task",
+  "attachments": {
+    "paper_pdf": null,
+    "methods_path": null
+  }
+}

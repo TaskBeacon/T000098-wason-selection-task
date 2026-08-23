@@ -1,0 +1,64 @@
+subinfo_fields: [{name: subject_id, type: int, constraints: {min: 101, max: 999, digits: 3}}]
+subinfo_mapping: {subject_id: 被试编号（三位数字）, Participant Information: 被试信息, registration_failed: 登记失败, registration_successful: 登记成功, invalid_input: "{field} 输入无效"}
+window: {size: [1280, 720], units: pix, screen: 0, bg_color: white, fullscreen: false, monitor_width_cm: 35.5, monitor_distance_cm: 60}
+task:
+  task_name: wason_selection_task
+  task_version: 0.1.0
+  save_path: ./outputs/sim_sampler
+  language: Chinese
+  voice_name: zh-CN-YunyangNeural
+  voice_enabled: false
+  seed_mode: same_within_sub
+  overall_seed: 98098
+  total_blocks: 1
+  total_trials: 4
+  trial_per_block: 4
+  trials_per_block: 4
+  conditions: [abstract_vowel_even, abstract_shape_color, social_car_fuel, social_drink_age]
+  condition_weights: null
+  continue_key: space
+  submit_key: return
+  card_keys: ["1", "2", "3", "4"]
+  key_list: [space, return, "1", "2", "3", "4"]
+  max_selection_steps: 5
+  card_positions: [[-450, 20], [-150, 20], [150, 20], [450, 20]]
+  selected_marker: "✓ "
+  none_selected_label: 尚未选择
+  selected_separator: "、"
+  cognitive_domain: [reasoning, conditional_reasoning, hypothesis_testing]
+  variant: abstract_and_social_contract
+  delta: 0.0
+  item_specs:
+    abstract_vowel_even: {condition_family: abstract, rule_text: 如果卡片一面是元音字母，那么另一面一定是偶数。, correct_cards: [1, 4], cards: [{face: A, role: P}, {face: D, role: not_P}, {face: "4", role: Q}, {face: "7", role: not_Q}]}
+    abstract_shape_color: {condition_family: abstract, rule_text: 如果卡片一面是三角形，那么另一面一定是蓝色。, correct_cards: [1, 4], cards: [{face: 三角形, role: P}, {face: 圆形, role: not_P}, {face: 蓝色, role: Q}, {face: 橙色, role: not_Q}]}
+    social_car_fuel: {condition_family: social_contract, rule_text: 如果某人借用了我的汽车，那么此人必须把油箱加满。, correct_cards: [1, 4], cards: [{face: 借用了汽车, role: P}, {face: 没有借汽车, role: not_P}, {face: 加满了油箱, role: Q}, {face: 没有加满油箱, role: not_Q}]}
+    social_drink_age: {condition_family: social_contract, rule_text: 如果某人正在饮酒，那么此人必须年满 18 岁。, correct_cards: [1, 4], cards: [{face: 正在饮酒, role: P}, {face: 正在喝汽水, role: not_P}, {face: 22 岁, role: Q}, {face: 16 岁, role: not_Q}]}
+timing: {fixation_s: 0.5, response_window_s: 30.0, iti_s: 0.5}
+stimuli:
+  instruction: {type: text, font: SimHei, text: "你将看到一条‘如果 P，那么 Q’的规则和四张双面卡片。\n\n请选出为了检验规则是否可能被违反而必须翻看的卡片。\n每次按数字键 1–4 选择一张卡，选完后按回车键提交。\n\n按空格键开始。", color: black, height: 28, wrapWidth: 1080, pos: [0, 0]}
+  fixation: {type: text, font: SimHei, text: "+", color: black, height: 42, pos: [0, 0]}
+  rule_template: {type: text, font: SimHei, text: "规则：{rule_text}", color: black, height: 30, wrapWidth: 1120, pos: [0, 235]}
+  card_template: {type: textbox, font: SimHei, text: "{marker}{number}\n\n{face}", color: black, letterHeight: 26, size: [230, 150], pos: [0, 20], borderColor: "#4B5563", fillColor: "#F3F4F6", borderWidth: 2, alignment: center, anchor: center, editable: false}
+  selection_status_template: {type: text, font: SimHei, text: "已选择：{selected_text}", color: "#1F2937", height: 26, wrapWidth: 900, pos: [0, -155]}
+  selection_hint: {type: text, font: SimHei, text: 按 1–4 选择必须翻看的卡片；选择完成后按回车键提交, color: "#4B5563", height: 23, wrapWidth: 1000, pos: [0, -245]}
+  goodbye: {type: text, font: SimHei, text: "任务完成，感谢参与。\n\n按空格键退出。", color: black, height: 32, wrapWidth: 1000, pos: [0, 0]}
+triggers:
+  map: {experiment_start: 1, experiment_end: 2, block_start: 3, block_end: 4, fixation_onset: 10, abstract_selection_onset: 20, social_selection_onset: 21, selection_update_onset: 22, card_1_selected: 31, card_2_selected: 32, card_3_selected: 33, card_4_selected: 34, selection_submitted: 40, selection_timeout: 41, iti_onset: 50, goodbye_onset: 60}
+  driver: {type: serial_url, url: "loop://", baudrate: 115200, timeout: 1, prefix: [1, 225, 1, 0]}
+  policy: {strict: false}
+  timing: {post_delay_s: 0.001}
+sim:
+  output_dir: outputs/sim_sampler
+  seed: 98099
+  participant_id: sampler098
+  session_id: sub-sampler098_task-wason-selection-task_seed98099
+  log_path: outputs/sim_sampler/sub-sampler098_task-wason-selection-task_seed98099_sim_events.jsonl
+  policy: warn
+  default_rt_s: 0.05
+  clamp_rt: true
+  enable_scaling: true
+  timing_scale: 0.05
+  min_frames: 1
+  responder:
+    type: responders.task_sampler:TaskSamplerResponder
+    kwargs: {correct_rate: 0.5, response_rate: 1.0, rt_mean_s: 0.05, rt_sd_s: 0.0}

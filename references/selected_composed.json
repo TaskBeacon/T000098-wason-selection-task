@@ -1,0 +1,116 @@
+[
+  {
+    "id": "APA_DICTIONARY_WASON",
+    "title": "Wason selection task",
+    "authors": [],
+    "year": 2018,
+    "journal": "APA Dictionary of Psychology",
+    "doi_or_url": "https://dictionary.apa.org/wason-selection-task",
+    "citation_count": 0,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "primary_protocol_source",
+      "task_workflow",
+      "stimulus_specification"
+    ],
+    "parameter_bindings": {},
+    "notes": "User-provided canonical paradigm entry; citation threshold exemption applies because this is the requested reference entry rather than a supporting research article.",
+    "source_kind": "url",
+    "source_locator": "https://dictionary.apa.org/wason-selection-task",
+    "attachments": {
+      "paper_pdf": null,
+      "methods_path": null
+    }
+  },
+  {
+    "id": "W2101286810",
+    "title": "A rational analysis of the selection task as optimal data selection",
+    "authors": [
+      "Mike Oaksford",
+      "Nick Chater"
+    ],
+    "year": 1994,
+    "journal": "Psychological Review",
+    "doi_or_url": "https://pages.ucsd.edu/~cmckenzie/OaksfordChaterPsychReview1994.pdf",
+    "citation_count": 1028,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "abstract_task_structure",
+      "normative_card_roles",
+      "response_pattern_benchmarks"
+    ],
+    "parameter_bindings": {
+      "normative_roles": [
+        "P",
+        "not_Q"
+      ]
+    },
+    "notes": "Open author-hosted copy; OpenAlex citation count checked 2026-08-23. Psychological Review is not in the repository whitelist, so is_high_impact remains false."
+  },
+  {
+    "id": "W2084092936",
+    "title": "Mental models and human reasoning",
+    "authors": [
+      "Philip N. Johnson-Laird"
+    ],
+    "year": 2010,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "doi_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2972923/",
+    "citation_count": 574,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "counterexample_reasoning",
+      "theoretical_interpretation"
+    ],
+    "parameter_bindings": {},
+    "notes": "PMC open-access full text; PNAS is in the repository high-impact whitelist. OpenAlex citation count checked 2026-08-23."
+  },
+  {
+    "id": "W2151097560",
+    "title": "Selective impairment of reasoning about social exchange in a patient with bilateral limbic system damage",
+    "authors": [
+      "Valerie E. Stone",
+      "Leda Cosmides",
+      "John Tooby",
+      "Neal Kroll",
+      "Robert T. Knight"
+    ],
+    "year": 2002,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "doi_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC123290/",
+    "citation_count": 277,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "social_contract_condition",
+      "condition_comparison",
+      "stimulus_semantics"
+    ],
+    "parameter_bindings": {
+      "social_contract_form": "If benefit P, then requirement Q"
+    },
+    "notes": "PMC open-access full text; PNAS is in the repository high-impact whitelist. OpenAlex citation count checked 2026-08-23."
+  },
+  {
+    "id": "W1981753740",
+    "title": "Interpretational factors in conditional reasoning",
+    "authors": [
+      "Valerie A. Thompson"
+    ],
+    "year": 1994,
+    "journal": "Memory & Cognition",
+    "doi_or_url": "https://link.springer.com/content/pdf/10.3758/BF03209259.pdf",
+    "citation_count": 206,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "conditional_interpretation",
+      "abstract_rule_design"
+    ],
+    "parameter_bindings": {},
+    "notes": "Open-access publisher PDF; OpenAlex citation count checked 2026-08-23."
+  }
+]

@@ -1,0 +1,25 @@
+id: T000098
+slug: wason-selection-task
+title: Wason Selection Task
+variant: baseline
+license: MIT
+maturity: smoke_tested
+version:
+  release_tag: v0.1.0
+contracts:
+  taps: v0.2.0
+runtime:
+  profile: psyflow
+  entrypoint: main.py
+acquisition: behavior
+language: Chinese
+canonical: true
+evidence:
+  - https://dictionary.apa.org/wason-selection-task
+  - https://doi.org/10.1037/0033-295X.101.4.608
+  - https://doi.org/10.1073/pnas.122352699
+  - https://doi.org/10.1073/pnas.1012933107
+  - https://doi.org/10.3758/BF03209259
+maintainer:
+  - TaskBeacon
+
