@@ -44,7 +44,7 @@ stimuli:
   goodbye: {type: text, font: SimHei, text: "任务完成，感谢参与。\n\n按空格键退出。", color: black, height: 32, wrapWidth: 1000, pos: [0, 0]}
 triggers:
   map: {experiment_start: 1, experiment_end: 2, block_start: 3, block_end: 4, fixation_onset: 10, abstract_selection_onset: 20, social_selection_onset: 21, selection_update_onset: 22, card_1_selected: 31, card_2_selected: 32, card_3_selected: 33, card_4_selected: 34, selection_submitted: 40, selection_timeout: 41, iti_onset: 50, goodbye_onset: 60}
-  driver: {type: serial_url, url: "loop://", baudrate: 115200, timeout: 1, prefix: [1, 225, 1, 0]}
+  driver: {type: mock, print_codes: true}
   policy: {strict: false}
   timing: {post_delay_s: 0.001}
 sim:
